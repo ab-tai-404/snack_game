@@ -1,5 +1,5 @@
 from  turtle import Turtle
-file = open("my_file.txt")
+file = open("data.txt")
 contents =file.read()
 file.close()
 class Scoreboard(Turtle):
@@ -20,9 +20,10 @@ class Scoreboard(Turtle):
     def reset(self):
 
         if self.score > self.high_score:
-            file1 = open("my_file.txt" ,  mode ="w")
+            file1 = open("data.txt" ,mode ="w")
             self.high_score = self.score
             file1.write(f"{self.high_score}")
+
         self.score = 0
         self.update_score()
 
